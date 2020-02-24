@@ -1,0 +1,46 @@
+Sender: LSF System <lsfadmin@gpu05>
+Subject: Job 49119: <MyTest> in cluster <cluster1> Done
+
+Job <MyTest> was submitted from host <log01> by user <chenyang.list> in cluster <cluster1> at Sat Feb 22 18:16:03 2020
+Job was executed on host(s) <gpu05>, in queue <gpu_v100>, as user <chenyang.list> in cluster <cluster1> at Sat Feb 22 18:16:03 2020
+</seu_share/home/chenyang.list> was used as the home directory.
+</seu_share/home/chenyang.list/TZ> was used as the working directory.
+Started at Sat Feb 22 18:16:03 2020
+Terminated at Sat Feb 22 18:16:17 2020
+Results reported at Sat Feb 22 18:16:17 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+#BSUB -J MyTest
+#BSUB -o result.txt
+#BSUB -n 1
+#BSUB -q gpu_v100
+
+export CUDA_VISIBLE_DEVICES=1
+export PATH=/seu_share/apps/anaconda3/bin:$PATH
+
+python StyleTransfer.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2.18 sec.
+    Max Memory :                                 67 MB
+    Average Memory :                             53.75 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   13 sec.
+    Turnaround time :                            14 sec.
+
+The output (if any) follows:
+
+?????

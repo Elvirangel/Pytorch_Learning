@@ -1,1 +1,52 @@
-恐怕看
+Sender: LSF System <lsfadmin@gpu06>
+Subject: Job 49121: <MyTest> in cluster <cluster1> Exited
+
+Job <MyTest> was submitted from host <log01> by user <chenyang.list> in cluster <cluster1> at Sat Feb 22 18:20:34 2020
+Job was executed on host(s) <gpu06>, in queue <gpu_v100>, as user <chenyang.list> in cluster <cluster1> at Sat Feb 22 18:20:32 2020
+</seu_share/home/chenyang.list> was used as the home directory.
+</seu_share/home/chenyang.list/TZ> was used as the working directory.
+Started at Sat Feb 22 18:20:32 2020
+Terminated at Sat Feb 22 18:20:48 2020
+Results reported at Sat Feb 22 18:20:48 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+#BSUB -J MyTest
+#BSUB -o Test.txt
+#BSUB -e Test.err
+#BSUB -n 1
+#BSUB -q gpu_v100
+
+export CUDA_VISIBLE_DEVICES=1
+export PATH=/seu_share/apps/anaconda3/bin:$PATH
+
+python StyleTransfer.py
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.51 sec.
+    Max Memory :                                 287 MB
+    Average Memory :                             219.25 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                30
+    Run time :                                   15 sec.
+    Turnaround time :                            14 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <Test.err> for stderr output of this job.
+
